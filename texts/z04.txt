@@ -1,0 +1,10 @@
+from math import sqrt
+#stranice paralelopipeda
+a = float(input('Unesi duzinu stranice a (cm): '))
+b = float(input('Unesi duzinu stranice b (cm): '))
+c = float(input('Unesi duzinu stranice c (cm): '))
+
+d_osnove = sqrt(a**2+b**2)
+d_prizme = sqrt(d_osnove**2+c**2)
+
+print('Prostorna dijagonala prizme iznosi: ', d_prizme)

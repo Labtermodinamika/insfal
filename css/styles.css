@@ -1,0 +1,177 @@
+
+body {
+  font-family:"Montserrat";
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+h3 {
+  font-size: 1.8rem;
+  line-height: 1.5;
+}
+.big-heading {
+  font-family: "Montserrat", sans-serif;
+  font-size: 3.5rem;
+  font-weight: bold;
+  line-height: 1.5;
+}
+p {
+  color: #8f8f8f;
+}
+#title {
+  background-color: #820000;
+  color: #fff;
+  padding-bottom: 3%;
+}
+/* Navigation bar */
+.container {
+  padding: 1% 5%;
+}
+.navbar {
+  padding-bottom: 2.5rem;
+}
+.navbar-brand {
+  font-family: "Ubuntu";
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-left: 0;
+}
+.nav-item {
+  padding: 0.5rem;
+}
+.nav-link {
+  margin-right: 0.5rem;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.btn {
+  margin:5% 3% 5% 0;
+}
+
+.title-image {
+  width: 20%;
+  transform: rotate(25deg);
+  position: absolute;
+  right: 20%;
+}
+@media (max-width: 1028px) {
+  .title-image {
+    position: static;
+    transform: rotate(0);
+    width: 80%;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+
+/* features */
+#features {
+  padding: 7% 15%;
+  background-color: #fff;
+  position: relative;
+  z-index: 1;
+}
+.features {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.3rem;
+  padding: 2% 0 2% 0;
+
+}
+
+.feature-box {
+  margin: 1% 0;
+}
+.row-features {
+  margin: 3% 0 3% 0;
+}
+.icon {
+    font-size: 3rem;
+    color: #820000;
+}
+.icon:hover {
+  color: #4E6C50;
+}
+
+
+/* testimonials */
+#testimonials {
+  text-align: center;
+  background-color: #820000;
+  color: #fff;
+}
+.carousel-item {
+    padding: 7% 15%;
+}
+
+
+.testimonial-image {
+  width: 20%;
+  border-radius: 100%;
+  margin: 20px;
+}
+
+/* Press */
+#press {
+  padding-bottom: 3%;
+  text-align: center;
+  background-color: #820000;
+}
+
+.press-logo {
+  width: 15%;
+  margin: 20px 20px 50px;
+}
+
+/* Pricing */
+#pricing {
+  padding: 100px;
+}
+.card {
+  text-align: center;
+  border-color: #820000;
+  border-width: 0.2rem;
+  margin-top: 20px;
+}
+
+.btn-outline-primary {
+  color: #820000;
+  border-color: #820000;
+}
+.btn-outline-primary:hover {
+  background-color: #4E6C50;
+  border-color: #4E6C50;
+}
+.price-text {
+  font-size: 2.8rem;
+  line-height: 1.5;
+}
+/* cta */
+#cta {
+  padding: 7% 15%;
+  background-color: #820000;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+}
+
+/* footer */
+#footer {
+  padding: 7% 15%;
+  background-color: fff;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  color: #820000;
+}
+.icon-fa {
+  color: #820000;
+  padding: 2%;
+  margin-bottom: 2%
+}
+
+.list-group {
+  padding:1rem;
+}

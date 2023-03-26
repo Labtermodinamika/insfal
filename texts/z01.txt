@@ -1,0 +1,9 @@
+#Koordinate tacaka A i B
+xa = float(input('Unesi koordinatu x tacke A: '))
+ya = float(input('Unesi koordinatu y tacke A: '))
+xb = float(input('Unesi koordinatu x tacke B: '))
+yb = float(input('Unesi koordinatu y tacke B: '))
+
+rastojanje = ((xb-xa)**2+(yb-ya)**2)**0.5
+
+print('Rastojanje izmedju tacaka A i B iznosi: ', rastojanje)

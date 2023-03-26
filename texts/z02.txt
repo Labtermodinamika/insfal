@@ -1,0 +1,9 @@
+#Dimenzije bazena
+a = float(input('Unesi duzinu bazena u m: '))
+b = float(input('Unesi sirinu bazena u m: '))
+c = float(input('Unesi dubinu bazena u m: '))
+#Protok vode u l/se
+protok = float(input('Unesi protok vode u l/s: '))*0.001
+
+vreme = (a*b*c/protok)/3600
+print('Bazen ce se napuniti za', round(vreme,2), 'sata.')

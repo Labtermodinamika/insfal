@@ -1,0 +1,10 @@
+from math import sqrt
+#stranice jednakokakog trougla
+a = float(input('Unesi duzinu osnovice a (cm): '))
+b = float(input('Unesi duzinu katete b (cm): '))
+
+obim = a + 2*b
+print('Obim trougla iznosi:', obim)
+h = sqrt(b**2+(a/2)**2)
+povrsina = a*h/2
+print('Povrsina jednakokrakog trougla iznosi: ', povrsina)
