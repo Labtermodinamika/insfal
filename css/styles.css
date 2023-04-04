@@ -97,16 +97,6 @@ p {
 }
 
 
-/* testimonials */
-#testimonials {
-  text-align: center;
-  background-color: #820000;
-  color: #fff;
-}
-.carousel-item {
-    padding: 7% 15%;
-}
-
 
 .testimonial-image {
   width: 20%;
@@ -114,25 +104,9 @@ p {
   margin: 20px;
 }
 
-/* Press */
-#press {
-  padding-bottom: 3%;
-  text-align: center;
-  background-color: #820000;
-}
-
-.press-logo {
-  width: 15%;
-  margin: 20px 20px 50px;
-}
-
-/* Pricing */
-#pricing {
-  padding: 100px;
-}
 .card {
   text-align: center;
-  border-color: #820000;
+  border-color: #FFFFFF;
   border-width: 0.2rem;
   margin-top: 20px;
 }
@@ -145,10 +119,7 @@ p {
   background-color: #4E6C50;
   border-color: #4E6C50;
 }
-.price-text {
-  font-size: 2.8rem;
-  line-height: 1.5;
-}
+
 /* cta */
 #cta {
   padding: 7% 15%;
