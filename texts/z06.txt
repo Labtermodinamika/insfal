@@ -1,0 +1,50 @@
+import random
+
+elementi = ['♦', '♠', '♣', '♥', '☺', '☼']
+indeks_elementa = [0, 1, 2, 3, 4, 5]
+
+print(f'Raspolozive boje {elementi}')
+print(f'Svaka boja u unosu zamenjena je odgovarajucim  brojem {indeks_elementa}')
+
+#Generisanje kombinacije od cetiri podatka
+master_mind = []
+master_mind_boja =[]
+for i in range(4):
+    clan = random.randint(0,5)
+    master_mind.append(clan)
+    master_mind_boja.append(elementi[clan])
+# print(master_mind)
+print('Pogodi kombinaciju u 6 pokusaja. Unose se brojevi koji odgovaraju odredjenoj boji')
+pogodak = False
+broj_pogadjanja = 6
+while not pogodak:
+    broj_pogodjenih = 0
+    broj_na_mestu = 0
+    unos = input('Unesi kombinaciju, sa pauzom izmedju svake boje (odgovarajuceg broja boje)\n')
+    trenutna_kombinacija = unos.split(' ')
+    for i in range(4):
+        if master_mind[i] == int(trenutna_kombinacija[i]):
+            broj_na_mestu+=1
+        else:
+            boja_tr = int(trenutna_kombinacija[i])
+            pog = master_mind.count(boja_tr)
+            pog1 = trenutna_kombinacija.count(str(boja_tr))
+            if pog !=0 and pog1 == 1:
+                broj_pogodjenih+=1
+    lista_boja = []
+    for boja in trenutna_kombinacija:
+        int_boja = int(boja)
+        lista_boja.append(elementi[int_boja])
+    print(f'Vasa kombinacija {lista_boja}')
+    if broj_na_mestu == 4:
+        print('Cestitam.Pogodili ste kombinaciju')
+        pogodak = True
+    else:
+        print(f'Broj pogodjenih na mestu {broj_na_mestu}, broj pogodjenih koji nisu na mestu {broj_pogodjenih}')
+        broj_pogadjanja-=1
+        if broj_pogadjanja ==0:
+            print('Zao mi je niste pogodili kombinaciju')
+            print(f'Kombinacija je bila {master_mind_boja}')
+            pogodak = True
+        else:
+            print(f'Imate jos {broj_pogadjanja} pokusaja.')

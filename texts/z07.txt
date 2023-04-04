@@ -1,0 +1,54 @@
+#Resavanje nelinearnih jednacina  - polinoma n-tog stepena metodom pololjenih intervala - bisekcije
+
+import math
+
+#Definisanje nelinearne jednacine
+stepen = int(input('Unesi stepen nelinearne jednacine: '))
+koeficijenti = []
+#Unosenje koelficijenata jednacine
+for i in range(0,stepen+1):
+    print('Uneti', i, '-ti koeficijent:\n')
+    koef = float(input())
+    koeficijenti.append(koef)
+
+greska = 1
+brojac = 0
+proracun = False
+while not proracun:
+    #Unosenje granica intervala - lociranje jedne od nula
+    a = float(input('Unesi donju granicu intervala: '))
+    b = float(input('Unesi gornju granicu intervala: '))
+    fa = 0
+    fb = 0
+    for i in range(0, stepen + 1):
+        fa += koeficijenti[i] * a ** i
+        fb += koeficijenti[i] * b ** i
+    if fa * fb < 0:
+        eps = float(input('Unesi zeljenu tacnost resenja'))
+        while greska > eps:
+            fa = 0
+            fb = 0
+            fc = 0
+            for i in range(0, stepen+1):
+                fa += koeficijenti[i]* a **i
+                fb += koeficijenti[i] * b ** i
+                c = (a+b)/2
+                fc += koeficijenti[i] * c ** i
+            if fa * fc < 0:
+                b = c
+                greska = b - a
+            elif fc * fb < 0:
+                a = c
+                greska = b - a
+            elif fa * fc == 0:
+                greska = eps
+            if greska < 0:
+                greska *= -1
+            brojac += 1
+        print('Jedan koren jednacine je: ', round(c, 3), 'dobijen u', brojac, 'iteracija')
+
+    else:
+        upit = input('Nema nule u intervalu. Da li zelite da probate sa drugim intervalom? (da/ne)').lower()
+        if upit == 'ne':
+            proracun = True
+
